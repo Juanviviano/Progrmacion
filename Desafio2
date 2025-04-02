@@ -1,0 +1,13 @@
+# Definimos los valores predefinidos para la base y la altura
+base = 5
+altura = 10
+
+# Calculamos el área del rectángulo
+area = base * altura
+
+# Mostramos el resultado de manera amigable
+print("Cálculo del área de un rectángulo")
+print("----------------------------------")
+print("Base del rectángulo:", base)
+print("Altura del rectángulo:", altura)
+print("El área del rectángulo es:", area)
