@@ -1,0 +1,13 @@
+# contador.py
+
+def es_par_o_impar(num):
+    if num % 2 == 0:
+        return "par"
+    else:
+        return "impar"
+
+def cuenta_regresiva(n):
+    if n < 0:
+        return
+    print(f"{n} - {es_par_o_impar(n)}")
+    cuenta_regresiva(n - 1)
