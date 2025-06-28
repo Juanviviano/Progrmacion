@@ -1,0 +1,14 @@
+import contador
+
+def main():
+    try:
+        numero = int(input("Introduce un número entero positivo: "))
+        if numero < 0:
+            print("Por favor, introduce un número entero positivo.")
+        else:
+            contador.par_impar(numero)
+    except ValueError:
+        print("Entrada no válida. Por favor, introduce un número entero.")
+
+if __name__ == "__main__":
+    main()
