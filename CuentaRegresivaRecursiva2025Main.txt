@@ -1,0 +1,38 @@
+# main.py
+import contador
+
+def solicitar_numero():
+    """
+    Solicita al usuario un número entero positivo.
+    
+    Returns:
+        int: El número ingresado por el usuario
+        
+    Raises:
+        ValueError: Si el valor ingresado no es un número entero positivo
+    """
+    while True:
+        try:
+            numero = int(input("Ingrese un número entero positivo: "))
+            if numero >= 0:
+                return numero
+            else:
+                print("Por favor ingrese un número positivo.")
+        except ValueError:
+            print("Por favor ingrese un número entero válido.")
+
+def main():
+    """
+    Función principal que ejecuta el programa.
+    """
+    print("Bienvenido al contador regresivo")
+    print("--------------------------------")
+    
+    numero = solicitar_numero()
+    
+    print(f"\nIniciando cuenta regresiva desde {numero}:")
+    contador.cuenta_regresiva(numero)
+    print("\n¡Conteo completo!")
+
+if __name__ == "__main__":
+    main()

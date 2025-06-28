@@ -1,0 +1,42 @@
+# contador.py
+def es_par_impar(numero):
+    """
+    Función auxiliar que determina si un número es par o impar.
+    Args:
+        numero (int): El número a evaluar
+    
+    Returns:
+        str: "par" si el número es par, "impar" si es impar
+    """
+    return "par" if numero % 2 == 0 else "impar"
+
+def cuenta_regresiva(n):
+    """
+    Función recursiva que imprime una cuenta regresiva desde n hasta 0,
+    indicando si cada número es par o impar.
+    
+    Args:
+        n (int): El número inicial para comenzar la cuenta regresiva
+    
+    Ejemplo de salida:
+        5 - impar
+        4 - par
+        3 - impar
+        2 - par
+        1 - impar
+        0 - par
+    """
+    if n < 0:
+        return  # Caso base para evitar recursión infinita
+    
+    print(f"{n} - {es_par_impar(n)}")
+    
+    if n > 0:  # Continuar la recursión mientras n > 0
+        cuenta_regresiva(n - 1)
+
+# Ejemplo de uso:
+if __name__ == "__main__":
+    print("Ejecutando cuenta regresiva desde 5:")
+    cuenta_regresiva(5)
+
+
